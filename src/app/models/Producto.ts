@@ -5,7 +5,7 @@ export class Producto {
   precio:number=0.0;
   stock:number=0.0;
 
-
+  //Constructor vacio
 	constructor() {
 	}
 
