@@ -1,0 +1,41 @@
+<div class="row" *ngIf="estado">
+
+  Id
+  <input type="text" [(ngModel)]="producto.id" id="txtId">
+
+
+  Nombre
+  <input type="text" [(ngModel)]="producto.nombre" id="txtNombre">
+
+
+  Descripción
+  <input type="text" [(ngModel)]="producto.descripcion" id="txtDescripcion">
+
+  Precio
+  <input type="text" [(ngModel)]="producto.precio" id="txtPrecio">
+
+
+
+  <button class="btn btn-primary" (click)="agregarProducto();">Guardar</button>
+</div>
+
+<div class="row">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of listaProductos">
+        <th scope="row">{{producto.id}}</th>
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.descripcion}}</td>
+        <td>{{producto.precio}} <i class="fas fa-dollar-sign"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
